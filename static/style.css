@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'YouTube Sans';
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/youtubesans/v18/Qw38ZQNGEDjaO2m6tqIqX5E-AVS5_rSejo46_PCTRspJ0OosolrBEJL3HO_T7fHoCVHx.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    background-color: #15141a;
+    color: #f1f1f1;
+    font-family: "YouTube Sans","Roboto",sans-serif;
+}
+
+.container {
+    display: flex;
+    overflow: clip;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+input {
+    color: #f1f1f1;
+}
+
+.rounded-rect {
+    border-radius: 18px;
+    padding: 0 16px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    outline-width: 0;
+    border-width: 0;
+}
+
+.url {
+    background-color: hsl(0, 0%, 7%);
+    outline: 1px solid hsl(0, 0%, 18.82%);
+    border-radius: 18px 0 0 18px;
+    width: 21rem;
+}
+.url:focus {
+    outline: 1px solid #1c62b9;
+}
+
+input.sumbit {
+    background-color: red;
+    font-weight: bold;
+    border-radius: 0 18px 18px 0;
+    cursor: pointer;
+    outline: 1px solid red;
+}
+input.sumbit:active {
+    background-color: darkred;
+}
+
+.six {
+    flex-direction: row;
+    align-items: baseline;
+}
+.six > img {
+    float: left;
+    border-radius: 81px;
+    height: 162px;
+}
+.six > q {
+    font-style: italic;
+}

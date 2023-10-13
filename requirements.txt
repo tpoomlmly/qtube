@@ -1,0 +1,3 @@
+flask[async]~=2.3.3
+yt-dlp~=2023.7.6
+werkzeug~=2.3.7

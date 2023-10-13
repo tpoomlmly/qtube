@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>YouTube Downloader</h1>
+<div style="margin-bottom: 2rem">
+    <form action="/" method="get">
+        <label for="url">Put the YouTube link here:&nbsp;</label>
+        <input required autofocus autocomplete="off" type="url" name="url" id="url" class="rounded-rect url" /><input type="submit" class="sumbit rounded-rect" value="Download" />
+    </form>
+</div>
+<div class="six">
+    <img src="/static/rosanna.jpg" alt="The face of Rosanna, a happy customer with a very square head">
+{#    <q>100% safe and virus free!</q>#}
+</div>
+{% endblock %}
