@@ -4,11 +4,16 @@
 <div style="margin-bottom: 2rem">
     <form action="/" method="get">
         <label for="url">Put the YouTube link here:&nbsp;</label>
-        <input required autofocus autocomplete="off" type="url" name="url" id="url" class="rounded-rect url" /><input type="submit" class="sumbit rounded-rect" value="Download" />
+        <input required autofocus autocomplete="off" type="url" name="v" id="url" class="rounded-rect url" /><input type="submit" class="sumbit rounded-rect" value="Download" />
     </form>
 </div>
-<div class="six">
-    <img src="/static/rosanna.jpg" alt="The face of Rosanna, a happy customer with a very square head">
+    <marquee class="outer" direction="down" behavior="alternate" scrolldelay="15" truespeed="" scrollamount="2">
+    <marquee class="inner" behavior="alternate" scrolldelay="15" scrollamount="3" truespeed="">
+        <div class="six">
+            <img src="/static/rosanna.jpg" alt="The face of Rosanna, a happy customer with a very square head">
+        </div>
+    </marquee>
+  </marquee>
+
 {#    <q>100% safe and virus free!</q>#}
-</div>
 {% endblock %}
