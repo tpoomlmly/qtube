@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>YouTube Downloader</title>
-{#    <link rel="stylesheet" href="/static/normalise.css">#}
-{#    <link rel="stylesheet" href="/static/style.css">#}
+    <link rel="stylesheet" href="/static/normalise.css">
+    <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/government/govuk-frontend-4.7.0.min.css">
 </head>
 <body>
 {% include "header.html" %}
 <main class="container">{% block content %}{% endblock %}</main>
+{% include "footer.html" %}
 <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
 </script>
