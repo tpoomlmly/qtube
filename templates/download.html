@@ -1,4 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Video: {{ video }}</h1>
+<div>
+    <form action="/download-video" method="get">
+{#        <label for="url">Put the YouTube link here:&nbsp;</label>#}
+        <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--l" for="url">
+                    What is the link to the video?
+                </label>
+            </h1>
+            <input required autofocus autocomplete="off" type="url" name="v" id="url" class="govuk-input" />
+            <input type="submit" class="govuk-button" value="Download" />
+        </div>
+    </form>
+</div>
 {% endblock %}

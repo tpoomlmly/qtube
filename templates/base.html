@@ -9,7 +9,10 @@
 </head>
 <body>
 {% include "header.html" %}
-<main class="container">{% block content %}{% endblock %}</main>
+<div class="govuk-width-container app-width-container">
+{% include "phase-banner.html" %}
+<main class="govuk-main-wrapper app-main-class" role="main">{% block content %}{% endblock %}</main>
+</div>
 {% include "footer.html" %}
 <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');

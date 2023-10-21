@@ -46,31 +46,9 @@ def index() -> str:
     return render_template("index.html")
 
 
-@app.route('/', methods=['POST'])
+@app.route('/download-video', methods=['GET'])
 def download() -> str:
-    url = request.form['url']
-
-    if not is_youtube_url(url):
-        abort(400, "youtube links only pls")
-
-    yt_dlp_options = [
-        "--no-playlist",
-        "--hls-use-mpegts",  # todo probably do need this for sending to the client while it downloads
-        "--no-part",
-        "--paths", "./downloaded",
-        # "--output", "aaaaaaa",  # todo see yt-dlp manual "OUTPUT TEMPLATE" section
-        # "--format", "FORMAT",  # todo see yt-dlp manual "FORMAT SELECTION" section
-        "--check-formats",
-        "--progress",
-        "--newline",
-        # "--quiet",
-        # "--verbose",
-        url,
-    ]
-    # yt_dlp.main(yt_dlp_options)
-    download_task = threading.Thread(target=yt_dlp.main, args=(yt_dlp_options,))
-    download_task.start()
-    return render_template("download.html", video=url)
+    return render_template("download.html")
 
 
 @app.errorhandler(404)
